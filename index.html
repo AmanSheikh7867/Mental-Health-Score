@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Pulse AI — Understand Your Mental Wellbeing</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============ Particles ============ -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#sec-hero">
+      <span class="nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+      <span class="nav-brand-text">Mind&nbsp;<span class="t-accent">Pulse</span>&nbsp;AI</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-menu" id="nav-menu">
+      <a href="#sec-hero" class="nav-link">Home</a>
+      <a href="#sec-how" class="nav-link">How It Works</a>
+      <a href="#sec-factors" class="nav-link">Stress Factors</a>
+      <a href="#sec-assess" class="nav-link">Assessment</a>
+      <a href="#sec-result" class="nav-link">Insights</a>
+      <a href="#sec-privacy" class="nav-link">About</a>
+    </div>
+    <a href="#sec-assess" class="nav-cta-btn">Check Your Wellbeing</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="sec sec-hero" id="sec-hero">
+  <div class="hero-bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-chip"><span class="chip-dot"></span>AI-Powered Mental Wellness Platform</div>
+      <h1 class="hero-h1">Your Mind Matters.<br><span class="t-gradient">Understand What's Behind&nbsp;the&nbsp;Stress.</span></h1>
+      <p class="hero-p">Mind Pulse AI uses intelligent analysis to help you understand patterns associated with stress, emotional pressure, lifestyle habits, academic pressure, and digital overload.</p>
+      <div class="hero-btns">
+        <a href="#sec-assess" class="btn btn-primary btn-lg" id="hero-cta">
+          <span>Check My Mental Wellbeing</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#sec-how" class="btn btn-ghost btn-lg">Explore How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <span>🤖 AI-powered</span><span class="trust-dot"></span>
+        <span>🔒 Privacy-focused</span><span class="trust-dot"></span>
+        <span>💡 Built for awareness, not diagnosis</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-illust">
+        <div class="brain-container">
+          <div class="brain-ring ring-1"></div>
+          <div class="brain-ring ring-2"></div>
+          <div class="brain-ring ring-3"></div>
+          <div class="brain-core"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M32 8C22 8 14 16 14 26c0 6 3 11.5 8 15v5a4 4 0 004 4h12a4 4 0 004-4v-5c5-3.5 8-9 8-15 0-10-8-18-18-18z"/><path d="M24 56h16" stroke-width="2"/><path d="M26 60h12" stroke-width="2"/></svg></div>
+        </div>
+        <div class="float-icon fi-1" title="Academic Pressure">📚</div>
+        <div class="float-icon fi-2" title="Social Media">📱</div>
+        <div class="float-icon fi-3" title="Sleep">😴</div>
+        <div class="float-icon fi-4" title="Career">💼</div>
+        <div class="float-icon fi-5" title="Stress">🧠</div>
+        <div class="float-icon fi-6" title="Fitness">💪</div>
+        <div class="float-icon fi-7" title="Loneliness">🫂</div>
+        <div class="float-icon fi-8" title="Deadlines">⏰</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORLD SECTION ============ -->
+<section class="sec sec-world" id="sec-world">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Understanding The Problem</p>
+      <h2 class="sec-title">The World Around Us Is Getting Louder.</h2>
+      <p class="sec-sub">Modern young people experience multiple sources of pressure simultaneously.<br>Here's what many students face every day.</p>
+    </div>
+    <div class="world-grid">
+      <div class="world-card anim-in"><div class="wc-icon">📚</div><h3>Academic Pressure</h3><p>Exams, assignments, competition, grades and the fear of failure.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">🎯</div><h3>Career Uncertainty</h3><p>"What should I do with my life?" — a question that weighs heavily.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">📱</div><h3>Social Media</h3><p>Comparison, unrealistic lifestyles, validation-seeking and endless scrolling.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">😴</div><h3>Sleep Disruption</h3><p>Late-night screens, irregular schedules and poor physical recovery.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">💸</div><h3>Financial Pressure</h3><p>Education costs, job pressure and uncertainty about the future.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">👨‍👩‍👧</div><h3>Family Expectations</h3><p>Pressure to succeed, perform and meet expectations at every stage.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">⚖️</div><h3>Social Comparison</h3><p>Seeing other people's achievements while questioning your own progress.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">🫂</div><h3>Loneliness</h3><p>Being digitally connected but emotionally disconnected from others.</p></div>
+      <div class="world-card anim-in"><div class="wc-icon">🔔</div><h3>Digital Overload</h3><p>Constant notifications, reels, short-form content and information overload.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec sec-how" id="sec-how">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Simple 3-Step Process</p>
+      <h2 class="sec-title">How Mind Pulse AI Works</h2>
+      <p class="sec-sub">A quick, private assessment — powered by machine learning.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step anim-in">
+        <div class="hs-num">01</div>
+        <div class="hs-icon-wrap"><span>📝</span></div>
+        <h3>Take the Assessment</h3>
+        <p>Answer 12 questions about your lifestyle, digital habits, and daily routines. Takes under 2 minutes.</p>
+      </div>
+      <div class="how-connector"><svg viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"><line x1="0" y1="12" x2="32" y2="12"/><polyline points="28 6 34 12 28 18"/></svg></div>
+      <div class="how-step anim-in">
+        <div class="hs-num">02</div>
+        <div class="hs-icon-wrap"><span>🤖</span></div>
+        <h3>AI Analyzes Patterns</h3>
+        <p>Our trained machine learning model identifies patterns and generates a personalized wellness score.</p>
+      </div>
+      <div class="how-connector"><svg viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"><line x1="0" y1="12" x2="32" y2="12"/><polyline points="28 6 34 12 28 18"/></svg></div>
+      <div class="how-step anim-in">
+        <div class="hs-num">03</div>
+        <div class="hs-icon-wrap"><span>📊</span></div>
+        <h3>Get Your Insight</h3>
+        <p>View your score with contributing factors, lifestyle insights, and suggested next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section class="sec sec-numbers" id="sec-numbers">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Our Impact</p>
+      <h2 class="sec-title">Mind Pulse in Numbers</h2>
+    </div>
+    <div class="numbers-grid">
+      <div class="num-card anim-in">
+        <span class="num-value counter" data-target="1240" data-suffix="+">0</span>
+        <span class="num-label">Predictions Generated</span>
+      </div>
+      <div class="num-card anim-in">
+        <span class="num-value counter" data-target="94.2" data-suffix="%" data-decimal="1">0</span>
+        <span class="num-label">Model Accuracy</span>
+      </div>
+      <div class="num-card anim-in">
+        <span class="num-value counter" data-target="87" data-suffix="%">0</span>
+        <span class="num-label">User Completion Rate</span>
+      </div>
+      <div class="num-card anim-in">
+        <span class="num-value">24/7</span>
+        <span class="num-label">AI Availability</span>
+      </div>
+    </div>
+    <p class="numbers-note">* Statistics shown are placeholder values for demonstration. Connect to your backend analytics to display real-time data.</p>
+  </div>
+</section>
+
+<!-- ============ ASSESSMENT ============ -->
+<section class="sec sec-assess" id="sec-assess">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Self-Assessment</p>
+      <h2 class="sec-title">Take a Moment. Check In With Yourself.</h2>
+      <p class="sec-sub">Answer a few questions about your lifestyle and habits. Your responses are processed locally by our AI model.</p>
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="empty-state">
+      <div class="es-visual">
+        <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="60" cy="60" r="50" stroke-dasharray="4 6" opacity=".25"/>
+          <circle cx="60" cy="60" r="35" stroke-dasharray="4 6" opacity=".15"/>
+          <path d="M60 25C47 25 37 35 37 48c0 8 4 15 10 19v6a5 5 0 005 5h16a5 5 0 005-5v-6c6-4 10-11 10-19 0-13-10-23-23-23z" stroke-width="2" opacity=".6"/>
+          <path d="M50 84h20M52 90h16" stroke-width="2" opacity=".4"/>
+        </svg>
+      </div>
+      <h3>Your Mind Pulse Insight is waiting.</h3>
+      <p>Complete the assessment to discover the patterns behind your current stress.</p>
+      <button class="btn btn-primary btn-lg" id="start-assess-btn">
+        <span>Start Assessment</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+
+    <!-- Wizard -->
+    <div class="wizard hidden" id="wizard">
+      <!-- Progress -->
+      <div class="wiz-progress">
+        <div class="wiz-progress-info">
+          <span id="wiz-step-text">Step 1 of 3 — About You</span>
+          <span class="wiz-pct" id="wiz-pct">33%</span>
+        </div>
+        <div class="wiz-track"><div class="wiz-fill" id="wiz-fill" style="width:33%"></div></div>
+        <div class="wiz-dots">
+          <button class="wiz-dot active" data-step="1"><span class="wd-num">1</span><span class="wd-label">About You</span></button>
+          <button class="wiz-dot" data-step="2"><span class="wd-num">2</span><span class="wd-label">Digital Life</span></button>
+          <button class="wiz-dot" data-step="3"><span class="wd-num">3</span><span class="wd-label">Wellness</span></button>
+        </div>
+      </div>
+
+      <form id="prediction-form" novalidate>
+        <!-- === STEP 1: About You === -->
+        <div class="wiz-step active" id="step-1">
+          <div class="step-card">
+            <div class="sc-header">
+              <div class="sc-icon" style="--ic:#6c5ce7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <div><h3 class="sc-title">About You</h3><p class="sc-sub">Tell us a little about yourself</p></div>
+            </div>
+            <div class="fields-grid">
+              <div class="field" id="field-age">
+                <label><span class="fl-text">How old are you?</span><span class="fl-req">*</span></label>
+                <div class="input-wrap">
+                  <span class="inp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></span>
+                  <input type="number" id="age" name="age" min="10" max="100" placeholder="Enter your age" required>
+                </div>
+                <div class="field-foot"><span class="fh">Between 10 – 100</span><span class="fe" id="age-error"></span></div>
+              </div>
+              <div class="field" id="field-gender">
+                <label><span class="fl-text">What's your gender?</span><span class="fl-req">*</span></label>
+                <div class="sel-wrap">
+                  <select id="gender" name="gender" required><option value="" disabled selected>Choose gender</option><option value="Male">Male</option><option value="Female">Female</option></select>
+                  <span class="sel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="field-foot"><span class="fe" id="gender-error"></span></div>
+              </div>
+              <div class="field" id="field-country">
+                <label><span class="fl-text">Where are you from?</span><span class="fl-req">*</span></label>
+                <div class="input-wrap">
+                  <span class="inp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg></span>
+                  <input type="text" id="country" name="country" placeholder="e.g. India, USA, Canada" required>
+                </div>
+                <div class="field-foot"><span class="fh">Enter your country name</span><span class="fe" id="country-error"></span></div>
+              </div>
+              <div class="field" id="field-academic_level">
+                <label><span class="fl-text">What's your academic level?</span><span class="fl-req">*</span></label>
+                <div class="sel-wrap">
+                  <select id="academic_level" name="academic_level" required><option value="" disabled selected>Choose level</option><option value="High School">High School</option><option value="Undergraduate">Undergraduate</option><option value="Graduate">Graduate</option></select>
+                  <span class="sel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </div>
+                <div class="field-foot"><span class="fe" id="academic_level-error"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- === STEP 2: Digital Life === -->
+        <div class="wiz-step" id="step-2">
+          <div class="step-card">
+            <div class="sc-header">
+              <div class="sc-icon" style="--ic:#0984e3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+              <div><h3 class="sc-title">Your Digital Life</h3><p class="sc-sub">Your social media and screen habits</p></div>
+            </div>
+            <div class="fields-grid">
+              <div class="field field-full" id="field-most_used_platform">
+                <label><span class="fl-text">Which platform do you use the most?</span><span class="fl-req">*</span></label>
+                <div class="chip-grid" id="platform-grid">
+                  <button type="button" class="chip" data-value="Instagram"><span class="chip-em">📸</span>Instagram</button>
+                  <button type="button" class="chip" data-value="YouTube"><span class="chip-em">▶️</span>YouTube</button>
+                  <button type="button" class="chip" data-value="TikTok"><span class="chip-em">🎵</span>TikTok</button>
+                  <button type="button" class="chip" data-value="Twitter"><span class="chip-em">🐦</span>Twitter</button>
+                  <button type="button" class="chip" data-value="Facebook"><span class="chip-em">📘</span>Facebook</button>
+                  <button type="button" class="chip" data-value="LinkedIn"><span class="chip-em">💼</span>LinkedIn</button>
+                  <button type="button" class="chip" data-value="Snapchat"><span class="chip-em">👻</span>Snapchat</button>
+                  <button type="button" class="chip" data-value="WhatsApp"><span class="chip-em">💬</span>WhatsApp</button>
+                  <button type="button" class="chip" data-value="WeChat"><span class="chip-em">🟢</span>WeChat</button>
+                  <button type="button" class="chip" data-value="LINE"><span class="chip-em">🟩</span>LINE</button>
+                  <button type="button" class="chip" data-value="KakaoTalk"><span class="chip-em">💛</span>KakaoTalk</button>
+                  <button type="button" class="chip" data-value="VKontakte"><span class="chip-em">🔵</span>VKontakte</button>
+                </div>
+                <input type="hidden" id="most_used_platform" name="most_used_platform" required>
+                <div class="field-foot"><span class="fe" id="most_used_platform-error"></span></div>
+              </div>
+              <div class="field field-full" id="field-purpose_of_use">
+                <label><span class="fl-text">What do you mainly use it for?</span><span class="fl-req">*</span></label>
+                <div class="purpose-grid" id="purpose-grid">
+                  <button type="button" class="purpose-btn" data-value="Education"><span class="pb-icon">🎓</span><span class="pb-name">Education</span></button>
+                  <button type="button" class="purpose-btn" data-value="Entertainment"><span class="pb-icon">🎮</span><span class="pb-name">Entertainment</span></button>
+                  <button type="button" class="purpose-btn" data-value="Networking"><span class="pb-icon">🤝</span><span class="pb-name">Networking</span></button>
+                  <button type="button" class="purpose-btn" data-value="News"><span class="pb-icon">📰</span><span class="pb-name">News</span></button>
+                </div>
+                <input type="hidden" id="purpose_of_use" name="purpose_of_use" required>
+                <div class="field-foot"><span class="fe" id="purpose_of_use-error"></span></div>
+              </div>
+              <div class="field field-full" id="field-avg_daily_usage_hours">
+                <label><span class="fl-text">How many hours a day do you spend on social media?</span></label>
+                <div class="slider-row">
+                  <input type="range" id="avg_daily_usage_hours_slider" min="0" max="24" step="0.5" value="3" class="range-input">
+                  <div class="slider-badge"><span class="sb-val" id="usage-display">3.0</span><span class="sb-unit">hrs/day</span></div>
+                </div>
+                <input type="hidden" id="avg_daily_usage_hours" name="avg_daily_usage_hours" value="3">
+                <div class="field-foot"><span class="fh">Drag to set (0 – 24 hours)</span></div>
+              </div>
+              <div class="field field-full" id="field-daily_unlocks">
+                <label><span class="fl-text">How many times do you unlock your phone daily?</span><span class="fl-req">*</span></label>
+                <div class="input-wrap">
+                  <span class="inp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span>
+                  <input type="number" id="daily_unlocks" name="daily_unlocks" min="0" placeholder="e.g. 50" required>
+                </div>
+                <div class="field-foot"><span class="fh">Average unlocks per day</span><span class="fe" id="daily_unlocks-error"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- === STEP 3: Daily Wellness === -->
+        <div class="wiz-step" id="step-3">
+          <div class="step-card">
+            <div class="sc-header">
+              <div class="sc-icon" style="--ic:#00b894"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+              <div><h3 class="sc-title">Your Daily Wellness</h3><p class="sc-sub">Tell us about your daily habits and routines</p></div>
+            </div>
+            <div class="fields-grid">
+              <div class="field" id="field-study_hours">
+                <label><span class="fl-text">📚 How many hours do you study per day?</span></label>
+                <div class="slider-row compact">
+                  <input type="range" id="study_hours_slider" min="0" max="24" step="0.5" value="4" class="range-input">
+                  <div class="slider-badge sm"><span class="sb-val" id="study-display">4.0</span><span class="sb-unit">hrs</span></div>
+                </div>
+                <input type="hidden" id="study_hours" name="study_hours" value="4">
+              </div>
+              <div class="field" id="field-physical_activity_hours">
+                <label><span class="fl-text">🏃 How active are you physically?</span></label>
+                <div class="slider-row compact">
+                  <input type="range" id="physical_activity_hours_slider" min="0" max="24" step="0.5" value="1" class="range-input">
+                  <div class="slider-badge sm"><span class="sb-val" id="activity-display">1.0</span><span class="sb-unit">hrs</span></div>
+                </div>
+                <input type="hidden" id="physical_activity_hours" name="physical_activity_hours" value="1">
+              </div>
+              <div class="field field-full" id="field-sleep_hours_per_night">
+                <label><span class="fl-text">😴 How well are you sleeping?</span></label>
+                <div class="slider-row">
+                  <input type="range" id="sleep_hours_per_night_slider" min="0" max="24" step="0.5" value="7" class="range-input">
+                  <div class="slider-badge"><span class="sb-val" id="sleep-display">7.0</span><span class="sb-unit">hrs/night</span></div>
+                </div>
+                <input type="hidden" id="sleep_hours_per_night" name="sleep_hours_per_night" value="7">
+              </div>
+              <div class="field field-full" id="field-stress_level">
+                <label><span class="fl-text">🧠 How would you describe your current stress?</span><span class="fl-req">*</span></label>
+                <div class="stress-grid" id="stress-grid">
+                  <button type="button" class="stress-btn" data-value="Low"><span class="sb-emoji">😌</span><span class="sb-name">Low</span><span class="sb-bar" style="--bw:25%;--bc:#00b894"></span></button>
+                  <button type="button" class="stress-btn" data-value="Medium"><span class="sb-emoji">😐</span><span class="sb-name">Medium</span><span class="sb-bar" style="--bw:50%;--bc:#fdcb6e"></span></button>
+                  <button type="button" class="stress-btn" data-value="High"><span class="sb-emoji">😣</span><span class="sb-name">High</span><span class="sb-bar" style="--bw:75%;--bc:#e17055"></span></button>
+                  <button type="button" class="stress-btn" data-value="Very High"><span class="sb-emoji">🤯</span><span class="sb-name">Very High</span><span class="sb-bar" style="--bw:100%;--bc:#d63031"></span></button>
+                </div>
+                <input type="hidden" id="stress_level" name="stress_level" required>
+                <div class="field-foot"><span class="fe" id="stress_level-error"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wizard Nav -->
+        <div class="wiz-nav">
+          <button type="button" class="btn btn-ghost hidden" id="prev-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span>Back</span></button>
+          <div class="wiz-nav-spacer"></div>
+          <button type="button" class="btn btn-primary" id="next-btn"><span>Continue</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="submit" class="btn btn-success hidden" id="submit-btn"><span>Get My Insight</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULT ============ -->
+<section class="sec sec-result hidden" id="sec-result">
+  <div class="container">
+    <div class="sec-header">
+      <div class="result-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Analysis Complete</div>
+      <h2 class="sec-title">Your Mind Pulse Insight</h2>
+    </div>
+
+    <!-- Gauge -->
+    <div class="result-gauge-area">
+      <div class="gauge-wrap">
+        <svg class="gauge-svg" viewBox="0 0 200 120">
+          <defs><linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d63031"/><stop offset="25%" stop-color="#e17055"/><stop offset="50%" stop-color="#fdcb6e"/><stop offset="75%" stop-color="#00cec9"/><stop offset="100%" stop-color="#00b894"/></linearGradient></defs>
+          <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12" stroke-linecap="round"/>
+          <path class="gauge-arc" id="gauge-fill" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#gaugeGrad)" stroke-width="12" stroke-linecap="round" stroke-dasharray="251.33" stroke-dashoffset="251.33"/>
+          <circle id="gauge-dot" cx="20" cy="100" r="7" fill="#6c5ce7"/>
+        </svg>
+        <div class="gauge-score-num" id="gauge-score">0.00</div>
+        <div class="gauge-max">/ 10</div>
+      </div>
+      <div class="score-badge" id="score-badge">Calculating…</div>
+      <p class="score-interp" id="score-interp"></p>
+    </div>
+
+    <!-- AI Insight -->
+    <div class="insight-section">
+      <h3 class="insight-h3">What Your Data May Be Telling You</h3>
+      <div class="insight-indicators" id="insight-indicators"></div>
+      <div class="ai-insight-box" id="ai-insight-box">
+        <div class="ai-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/><line x1="9" y1="22" x2="15" y2="22"/></svg> AI Insight</div>
+        <p id="ai-insight-text"></p>
+      </div>
+    </div>
+
+    <!-- Contributing factors bars -->
+    <div class="factors-bars-section">
+      <h3>Contributing Factors</h3>
+      <div class="factor-bars" id="factor-bars"></div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="result-disclaimer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12.01" y2="16"/><line x1="12" y1="8" x2="12" y2="12"/></svg>
+      <p>This is an <strong>AI-based wellness assessment</strong> and not a medical diagnosis. Results are intended for awareness and self-reflection only.</p>
+    </div>
+
+    <div class="result-actions">
+      <button class="btn btn-ghost" id="retake-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg><span>Retake Assessment</span></button>
+    </div>
+  </div>
+  <div class="confetti-box" id="confetti-box"></div>
+</section>
+
+<!-- ============ ERROR ============ -->
+<section class="sec sec-error hidden" id="sec-error">
+  <div class="container">
+    <div class="error-card">
+      <div class="err-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <h2>Oops! Something went wrong</h2>
+      <p class="err-msg" id="error-message"></p>
+      <button class="btn btn-primary" id="error-retry-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg><span>Try Again</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRESS FACTORS ============ -->
+<section class="sec sec-factors" id="sec-factors">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Data Visualization</p>
+      <h2 class="sec-title">What Affects Your Mind?</h2>
+      <p class="sec-sub">Example stress factors based on common patterns among students.</p>
+    </div>
+    <div class="factors-layout">
+      <div class="donut-area anim-in">
+        <svg class="donut-svg" viewBox="0 0 200 200" id="donut-chart"></svg>
+        <div class="donut-center"><span class="donut-label">Example<br>Stress Factors</span></div>
+      </div>
+      <div class="bars-area anim-in">
+        <div class="hbar"><span class="hbar-label">Academic Pressure</span><div class="hbar-track"><div class="hbar-fill" style="--hw:82%"></div></div><span class="hbar-val">32%</span></div>
+        <div class="hbar"><span class="hbar-label">Career Anxiety</span><div class="hbar-track"><div class="hbar-fill" style="--hw:54%"></div></div><span class="hbar-val">21%</span></div>
+        <div class="hbar"><span class="hbar-label">Digital Overload</span><div class="hbar-track"><div class="hbar-fill" style="--hw:46%"></div></div><span class="hbar-val">18%</span></div>
+        <div class="hbar"><span class="hbar-label">Sleep Issues</span><div class="hbar-track"><div class="hbar-fill" style="--hw:36%"></div></div><span class="hbar-val">14%</span></div>
+        <div class="hbar"><span class="hbar-label">Social Comparison</span><div class="hbar-track"><div class="hbar-fill" style="--hw:23%"></div></div><span class="hbar-val">9%</span></div>
+        <div class="hbar"><span class="hbar-label">Other Factors</span><div class="hbar-track"><div class="hbar-fill" style="--hw:15%"></div></div><span class="hbar-val">6%</span></div>
+      </div>
+    </div>
+    <p class="factors-note">* These percentages are illustrative. Connect your model's feature importance data for real values.</p>
+  </div>
+</section>
+
+<!-- ============ MODEL METRICS ============ -->
+<section class="sec sec-metrics" id="sec-metrics">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Transparency</p>
+      <h2 class="sec-title">Behind the Prediction</h2>
+      <p class="sec-sub">Model performance metrics from training. These are placeholder values — replace with your actual model metrics.</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card anim-in"><span class="mc-val" id="mc-accuracy">94.2%</span><span class="mc-label">Model Accuracy</span><div class="mc-bar"><div class="mc-fill" style="--mw:94.2%"></div></div></div>
+      <div class="metric-card anim-in"><span class="mc-val" id="mc-f1">0.91</span><span class="mc-label">F1 Score</span><div class="mc-bar"><div class="mc-fill" style="--mw:91%"></div></div></div>
+      <div class="metric-card anim-in"><span class="mc-val" id="mc-precision">93.5%</span><span class="mc-label">Precision</span><div class="mc-bar"><div class="mc-fill" style="--mw:93.5%"></div></div></div>
+      <div class="metric-card anim-in"><span class="mc-val" id="mc-recall">92.1%</span><span class="mc-label">Recall</span><div class="mc-bar"><div class="mc-fill" style="--mw:92.1%"></div></div></div>
+      <div class="metric-card anim-in"><span class="mc-val" id="mc-predictions">1,240+</span><span class="mc-label">Predictions Generated</span><div class="mc-bar"><div class="mc-fill" style="--mw:100%"></div></div></div>
+    </div>
+    <p class="metrics-note">* Metrics shown are configurable placeholder values. Update <code>MODEL_METRICS</code> in script.js with your real model performance data.</p>
+  </div>
+</section>
+
+<!-- ============ STUDENT CYCLE ============ -->
+<section class="sec sec-cycle" id="sec-cycle">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Built for Student Life</p>
+      <h2 class="sec-title">A Day in the Life of a Student</h2>
+    </div>
+    <div class="cycle-timeline">
+      <div class="ct-item anim-in"><div class="ct-time">🌅 Morning</div><div class="ct-line"></div><div class="ct-content"><p>Classes + lack of sleep + catching up on assignments</p></div></div>
+      <div class="ct-item anim-in"><div class="ct-time">☀️ Afternoon</div><div class="ct-line"></div><div class="ct-content"><p>Assignments + deadlines + exam preparation</p></div></div>
+      <div class="ct-item anim-in"><div class="ct-time">🌇 Evening</div><div class="ct-line"></div><div class="ct-content"><p>Career pressure + comparison + part-time work</p></div></div>
+      <div class="ct-item anim-in"><div class="ct-time">🌙 Night</div><div class="ct-line"></div><div class="ct-content"><p>Phone + social media + overthinking + poor sleep</p></div></div>
+      <div class="ct-item ct-result anim-in"><div class="ct-time">😓 Result</div><div class="ct-line"></div><div class="ct-content"><p><strong>Mental fatigue, burnout, and stress accumulation</strong></p></div></div>
+      <div class="ct-solution anim-in">
+        <div class="ct-arrow">↓</div>
+        <div class="ct-brand">Mind Pulse AI</div>
+        <div class="ct-flow"><span>Awareness</span><span>→</span><span>Understanding</span><span>→</span><span>Better Decisions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATIONAL ============ -->
+<section class="sec sec-edu" id="sec-edu">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Learn More</p>
+      <h2 class="sec-title">Understand Your Mental Wellbeing</h2>
+      <p class="sec-sub">Tap any card to learn more. This content is educational and non-diagnostic.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">😰</span><h4>Stress</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Stress is a natural response to challenges. Short-term stress can be motivating, but chronic stress can affect sleep, focus, and overall health. Learning to manage stress through breaks, exercise, and support can help.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">😟</span><h4>Anxiety</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Anxiety involves persistent worry that may interfere with daily activities. It's common among students facing academic or social pressures. Techniques like deep breathing and mindfulness can provide relief.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">🔥</span><h4>Burnout</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Burnout is emotional, physical, and mental exhaustion from prolonged stress. Signs include feeling detached, reduced performance, and cynicism. Rest, boundaries, and seeking help are key to recovery.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">😴</span><h4>Sleep</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Quality sleep is essential for memory, focus, and emotional regulation. Most young adults need 7–9 hours. Consistent schedules and reducing screen time before bed can improve sleep quality significantly.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">🎯</span><h4>Focus</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Difficulty focusing can stem from digital distractions, lack of sleep, or high stress. Techniques like the Pomodoro method, limiting notifications, and single-tasking can help improve concentration.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">📱</span><h4>Digital Overload</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Constant connectivity can lead to information fatigue and reduced attention span. Setting screen time limits, turning off non-essential notifications, and scheduling device-free time can help restore balance.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">💫</span><h4>Emotional Exhaustion</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>Emotional exhaustion occurs when you feel drained from sustained emotional demands. It's common during exam periods or social conflicts. Self-care routines and talking to someone you trust can help.</p></div>
+      </div>
+      <div class="edu-card anim-in" data-expanded="false">
+        <div class="ec-top"><span class="ec-icon">📚</span><h4>Academic Pressure</h4><span class="ec-toggle">+</span></div>
+        <div class="ec-body"><p>The drive to achieve academically can become overwhelming. Setting realistic goals, breaking tasks into smaller steps, and remembering that grades don't define your worth are important perspectives.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTES ============ -->
+<section class="sec sec-quotes" id="sec-quotes">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">A Gentle Reminder</p>
+      <h2 class="sec-title">A Reminder For Difficult Days</h2>
+    </div>
+    <div class="quotes-carousel anim-in">
+      <div class="quote-slide active" data-idx="0">
+        <blockquote>"You don't have to solve your entire life today."</blockquote>
+      </div>
+      <div class="quote-slide" data-idx="1">
+        <blockquote>"Rest is not the opposite of progress."</blockquote>
+      </div>
+      <div class="quote-slide" data-idx="2">
+        <blockquote>"Your worth is not measured by your productivity."</blockquote>
+      </div>
+      <div class="quote-slide" data-idx="3">
+        <blockquote>"A difficult phase is not the definition of your life."</blockquote>
+      </div>
+      <div class="quote-slide" data-idx="4">
+        <blockquote>"It's okay to ask for help. Strength is knowing when you need it."</blockquote>
+      </div>
+      <div class="quotes-dots" id="quotes-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="sec sec-reviews" id="sec-reviews">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Demo Feedback</p>
+      <h2 class="sec-title">What People Are Saying</h2>
+      <p class="sec-sub">These are example testimonials for demonstration purposes.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card anim-in">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"Seeing the different factors behind my stress made the problem feel much more understandable."</p>
+        <div class="rv-author"><span class="rv-avatar">👩‍🎓</span><div><strong>Student</strong><span class="rv-role">Undergraduate</span></div></div>
+      </div>
+      <div class="review-card anim-in">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"I liked that the assessment was simple and didn't feel like filling out a medical form."</p>
+        <div class="rv-author"><span class="rv-avatar">👨‍💻</span><div><strong>Engineering Student</strong><span class="rv-role">Final Year</span></div></div>
+      </div>
+      <div class="review-card anim-in">
+        <div class="rv-stars">★★★★★</div>
+        <p class="rv-text">"The dashboard made my stress patterns much easier to understand. Very insightful tool."</p>
+        <div class="rv-author"><span class="rv-avatar">👩‍💼</span><div><strong>College Student</strong><span class="rv-role">Graduate</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="sec sec-privacy" id="sec-privacy">
+  <div class="container">
+    <div class="sec-header anim-in">
+      <p class="sec-label">Trust & Safety</p>
+      <h2 class="sec-title">Your Mind Is Personal.</h2>
+    </div>
+    <div class="privacy-grid">
+      <div class="priv-card anim-in"><span class="pc-icon">🔒</span><h4>Privacy-First Design</h4><p>Your responses are processed locally. We don't store, share, or sell your data.</p></div>
+      <div class="priv-card anim-in"><span class="pc-icon">📋</span><h4>Minimal Data Collection</h4><p>We only collect what's needed for the assessment. No personal identifiers required.</p></div>
+      <div class="priv-card anim-in"><span class="pc-icon">🔐</span><h4>Secure Communication</h4><p>All API communication uses secure protocols between your browser and the server.</p></div>
+      <div class="priv-card anim-in"><span class="pc-icon">🤖</span><h4>AI, Not a Doctor</h4><p>This tool provides AI-based awareness insights. It is not a substitute for professional advice.</p></div>
+    </div>
+    <div class="crisis-notice anim-in">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <p><strong>If you are experiencing severe distress or feel that you may be in immediate danger, please seek help from a qualified mental-health professional or your local emergency/crisis service.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+      <span class="nav-brand-text">Mind&nbsp;<span class="t-accent">Pulse</span>&nbsp;AI</span>
+      <p class="footer-tagline">Understand your mind. Navigate your stress. Find your balance.</p>
+    </div>
+    <div class="footer-links">
+      <h5>Explore</h5>
+      <a href="#sec-hero">Home</a>
+      <a href="#sec-how">How It Works</a>
+      <a href="#sec-assess">Assessment</a>
+      <a href="#sec-factors">Stress Factors</a>
+    </div>
+    <div class="footer-links">
+      <h5>Info</h5>
+      <a href="#sec-privacy">Privacy</a>
+      <a href="#sec-privacy">Disclaimer</a>
+      <a href="#sec-metrics">Model Info</a>
+      <a href="#sec-reviews">Feedback</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Mind Pulse AI is an AI-powered wellness awareness tool and is <strong>not a substitute</strong> for professional medical or psychological advice.</p>
+    <p class="footer-copy">© 2026 Mind Pulse AI. Built with ❤️ and Machine Learning.</p>
+  </div>
+</footer>
+
+<!-- ============ LOADING ============ -->
+<div class="loading-overlay hidden" id="loading-overlay">
+  <div class="loader-card">
+    <div class="loader-visual">
+      <div class="loader-rings"><div class="lr lr-1"></div><div class="lr lr-2"></div><div class="lr lr-3"></div></div>
+      <div class="loader-brain-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M32 8C22 8 14 16 14 26c0 6 3 11.5 8 15v5a4 4 0 004 4h12a4 4 0 004-4v-5c5-3.5 8-9 8-15 0-10-8-18-18-18z"/><path d="M24 56h16"/><path d="M26 60h12"/></svg></div>
+    </div>
+    <h3>Mind Pulse AI is analyzing your responses…</h3>
+    <p>Our model is processing your data to generate insights.</p>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
