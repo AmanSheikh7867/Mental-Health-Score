@@ -17,7 +17,7 @@
     completion: 87,
   };
   
-  const API_URL = 'http://127.0.0.1:8000/predict';
+  const API_URL = 'https://mental-health-score-3-nj16.onrender.com';
   // ========================================
 
   // ========== 2. DOM REFERENCES ==========
